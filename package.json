@@ -1,0 +1,25 @@
+{
+  "name": "opengym-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Remote MCP gateway for a self-hosted openGym: read and write routines, schedule, workouts, body weight and custom exercises over Streamable HTTP, authenticated with openGym's own pairing token.",
+  "license": "AGPL-3.0-or-later",
+  "author": "Patryk Czechowski",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node --import ./src/register.js src/server.js",
+    "pair": "node scripts/pair.mjs",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "vitest": "4.1.11"
+  }
+}

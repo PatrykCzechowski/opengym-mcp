@@ -1,0 +1,3 @@
+[submodule "vendor/opengym"]
+	path = vendor/opengym
+	url = https://github.com/DuarteSantos8/openGym
