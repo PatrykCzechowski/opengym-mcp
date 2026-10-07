@@ -1,0 +1,26 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Image builds and answers /health
+        run: |
+          docker build -t opengym-mcp .
+          docker run -d --name gw -p 3100:3100 -e OPENGYM_API=http://127.0.0.1:9 opengym-mcp
+          for i in $(seq 1 20); do curl -fs localhost:3100/health && exit 0; sleep 1; done
+          docker logs gw; exit 1

@@ -1,0 +1,12 @@
+.git
+node_modules
+**/node_modules
+**/*.test.js
+**/*.test.jsx
+**/test
+vendor/opengym/frontend/android
+vendor/opengym/frontend/ios
+vendor/opengym/website
+vendor/opengym/assets
+vendor/opengym/media
+vendor/opengym/data

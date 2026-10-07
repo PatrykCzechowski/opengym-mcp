@@ -1,0 +1,20 @@
+# Next to an openGym stack started from its own docker-compose.yml (project name "opengym").
+# The gateway joins that stack's network and calls the API container directly.
+name: opengym-mcp
+
+services:
+  mcp:
+    build: .
+    image: opengym-mcp:local
+    restart: unless-stopped
+    environment:
+      OPENGYM_API: http://api:3000
+    ports:
+      - "127.0.0.1:3100:3100"   # put your reverse proxy in front; see README
+    networks:
+      - opengym
+
+networks:
+  opengym:
+    name: opengym_default
+    external: true
