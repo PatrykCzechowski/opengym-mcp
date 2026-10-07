@@ -80,6 +80,7 @@ handle /gym/mcp {
 | `OPENGYM_API` | `http://api:3000` | openGym API, as the gateway reaches it |
 | `PORT` | `3100` | |
 | `HOST` | `0.0.0.0` | |
+| `MCP_HOST_PORT` | `3100` | host port in `docker-compose.example.yml` |
 
 ## Connect a client
 

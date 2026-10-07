@@ -10,7 +10,7 @@ services:
     environment:
       OPENGYM_API: http://api:3000
     ports:
-      - "127.0.0.1:3100:3100"   # put your reverse proxy in front; see README
+      - "127.0.0.1:${MCP_HOST_PORT:-3100}:3100"   # put your reverse proxy in front; see README
     networks:
       - opengym
 
