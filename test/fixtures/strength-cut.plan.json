@@ -1,0 +1,64 @@
+{
+  "opengym_plan": 1,
+  "exported": "2026-10-07",
+  "name": "Plan treningowy: siła i redukcja",
+  "unit": "kg",
+  "week": { "1": ["d1"], "2": ["d2"], "4": ["d3"], "5": ["d4"] },
+  "routines": [
+    {
+      "id": "d1", "name": "Dzień 1: Dół, siła", "emoji": "legs",
+      "ex": [
+        { "id": "0043", "sets": 4, "reps": 5, "weight": 0, "prog": "linear", "inc": 2.5, "restSec": 180, "warmupSets": 4, "note": "RIR 2. Buty z obcasem, pas na serie robocze. Ramiona asekuracyjne kilka cm pod gryfem w najniższym punkcie." },
+        { "id": "0085", "sets": 3, "reps": 8, "weight": 0, "prog": "linear", "inc": 2.5, "restSec": 90, "note": "RIR 2. Kolana lekko ugięte, gryf przy udach, schodzisz do połowy piszczeli z prostymi plecami." },
+        { "id": "0410", "sets": 3, "reps": 8, "weight": 0, "side": true, "prog": "linear", "inc": 2, "restSec": 90, "note": "RIR 2. Bułgarski: tylna stopa na ławce, zaczynasz słabszą nogą." },
+        { "id": "0489", "sets": 3, "reps": 15, "repsMin": 12, "prog": "double", "restSec": 75, "note": "RIR 2. Ruch z bioder; gdy 15 idzie łatwo, trzymaj talerz przy klatce." },
+        { "id": "0417", "sets": 3, "reps": 15, "repsMin": 12, "weight": 0, "prog": "double", "restSec": 75, "sg": "a", "note": "RIR 1. Na podeście, z hantlem." },
+        { "id": "0175", "sets": 3, "reps": 15, "repsMin": 12, "weight": 0, "prog": "double", "restSec": 75, "sg": "a", "note": "RIR 1. Allahy na wyciągu górnym." }
+      ]
+    },
+    {
+      "id": "d2", "name": "Dzień 2: Góra, siła", "emoji": "barbell",
+      "ex": [
+        { "id": "0025", "sets": 4, "reps": 5, "weight": 0, "prog": "linear", "inc": 1, "restSec": 180, "warmupSets": 4, "note": "RIR 2. Ramiona asekuracyjne tuż pod gryfem leżącym na klatce." },
+        { "id": "0027", "sets": 4, "reps": 8, "repsMin": 6, "weight": 0, "prog": "double", "inc": 2.5, "restSec": 90, "note": "RIR 2. Tułów ok. 45°, ciągniesz do pępka, bez bujania tułowiem." },
+        { "id": "0314", "sets": 3, "reps": 10, "repsMin": 8, "weight": 0, "prog": "double", "restSec": 90, "note": "RIR 2. Ławka ok. 30°." },
+        { "id": "0198", "sets": 3, "reps": 10, "repsMin": 8, "weight": 0, "prog": "double", "restSec": 90, "note": "RIR 2. Gdy zrobisz 8 czystych podciągnięć, zamień nimi to ćwiczenie." },
+        { "id": "0334", "sets": 3, "reps": 15, "repsMin": 12, "weight": 0, "prog": "double", "restSec": 75, "sg": "a", "note": "RIR 1." },
+        { "id": "0201", "sets": 3, "reps": 12, "repsMin": 10, "weight": 0, "prog": "double", "restSec": 75, "sg": "a", "note": "RIR 1. Prostowanie ramion na wyciągu górnym." },
+        { "id": "0203", "sets": 2, "reps": 20, "repsMin": 15, "weight": 0, "prog": "double", "restSec": 75, "sg": "b", "note": "RIR 2. Jako face pull: lina do twarzy, łokcie wysoko (wyciąg górny lub guma)." },
+        { "id": "0313", "sets": 2, "reps": 12, "repsMin": 10, "weight": 0, "prog": "double", "restSec": 75, "sg": "b", "note": "RIR 1. Chwyt młotkowy." },
+        { "id": "3666", "sets": 1, "min": 20, "speed": 5.5, "note": "Marsz pod górę, nachylenie 6-12%, 5-6 km/h. Od 20 min, +5 min co tydzień do 30. Bez trzymania poręczy." }
+      ]
+    },
+    {
+      "id": "d3", "name": "Dzień 3: Dół, martwy ciąg", "emoji": "legs",
+      "ex": [
+        { "id": "0032", "sets": 3, "reps": 5, "weight": 0, "prog": "linear", "inc": 2.5, "restSec": 180, "warmupSets": 4, "note": "RIR 2. Z bumperów, w płaskich butach, pas na serie robocze." },
+        { "id": "c-pause-squat", "sets": 3, "reps": 5, "weight": 0, "prog": "linear", "inc": 2.5, "restSec": 180, "warmupSets": 3, "note": "RIR 3. Ok. 70-75% ciężaru z Dnia 1, 2 s bez ruchu w dole, bez odbicia." },
+        { "id": "3562", "sets": 3, "reps": 12, "repsMin": 8, "weight": 0, "prog": "double", "inc": 2.5, "restSec": 90, "note": "RIR 2. Hip thrust: łopatki na ławce, pod gryf ręcznik lub pianka, w górze 1 s pauzy." },
+        { "id": "c-ball-leg-curl", "sets": 3, "reps": 15, "repsMin": 10, "prog": "double", "restSec": 75, "note": "RIR 1." },
+        { "id": "0417", "sets": 3, "reps": 15, "repsMin": 12, "weight": 0, "prog": "double", "restSec": 75, "sg": "a", "note": "RIR 1. Na podeście, z hantlem." },
+        { "id": "0011", "sets": 3, "reps": 12, "repsMin": 10, "prog": "double", "restSec": 75, "sg": "a", "note": "RIR 1. Unoszenie kolan w zwisie na drążku." }
+      ]
+    },
+    {
+      "id": "d4", "name": "Dzień 4: Góra, objętość", "emoji": "barbell",
+      "ex": [
+        { "id": "1456", "sets": 3, "reps": 8, "repsMin": 6, "weight": 0, "prog": "double", "inc": 1, "restSec": 180, "warmupSets": 4, "note": "RIR 2. Wyciskanie żołnierskie stojąc, chwyt na szerokość barków. Gryf ze stojaków na wysokości obojczyków, pośladki i brzuch napięte, bez wyginania lędźwi." },
+        { "id": "0405", "sets": 3, "reps": 12, "repsMin": 8, "weight": 0, "prog": "double", "restSec": 90, "note": "RIR 2. Ławka skośna ok. 70-80°, łokcie lekko przed tułowiem, hantle do wysokości uszu. Zacznij lżej niż na skosie z Dnia 2." },
+        { "id": "0030", "sets": 3, "reps": 10, "repsMin": 8, "weight": 0, "prog": "double", "inc": 2.5, "restSec": 90, "note": "RIR 2. Chwyt na szerokość barków, start od ok. 75-80% ciężaru z Dnia 2. Gdy trening się przeciąga: 2 serie." },
+        { "id": "0861", "sets": 3, "reps": 12, "repsMin": 10, "weight": 0, "prog": "double", "restSec": 90, "note": "RIR 2. Wiosłowanie na wyciągu dolnym." },
+        { "id": "0245", "sets": 3, "reps": 12, "repsMin": 8, "weight": 0, "prog": "double", "restSec": 90, "note": "RIR 2. Albo podciąganie z gumą." },
+        { "id": "0334", "sets": 3, "reps": 20, "repsMin": 15, "weight": 0, "prog": "double", "restSec": 75, "sg": "a", "note": "RIR 1. Hantle od 7,5 kg; za ciężko: wyciąg dolny lub guma." },
+        { "id": "0378", "sets": 3, "reps": 15, "repsMin": 12, "weight": 0, "prog": "double", "restSec": 75, "sg": "a", "note": "RIR 1. Odwrotne rozpiętki w opadzie (tył barków)." },
+        { "id": "0447", "sets": 3, "reps": 12, "repsMin": 10, "weight": 0, "prog": "double", "restSec": 75, "sg": "b", "note": "RIR 1. Sztanga 1,5 m." },
+        { "id": "0430", "sets": 3, "reps": 12, "repsMin": 10, "weight": 0, "prog": "double", "restSec": 75, "sg": "b", "note": "RIR 1. Prostowanie ramion nad głową z hantlem." },
+        { "id": "3666", "sets": 1, "min": 20, "speed": 5.5, "note": "Marsz pod górę, nachylenie 6-12%, 5-6 km/h. Od 20 min, +5 min co tydzień do 30." }
+      ]
+    }
+  ],
+  "customEx": [
+    { "id": "c-pause-squat", "n": "Przysiad z pauzą 2 s", "bp": "upper legs", "eq": "barbell", "tg": "quadriceps", "primaries": ["quadriceps", "gluteal"], "secondaries": ["adductors", "lower-back"], "muscleGroups": ["quadriceps", "gluteal", "adductors", "lower-back"], "desc": "Przysiad ze sztangą z 2 s pauzą w dole, bez odbicia. Ok. 70-75% ciężaru przysiadu z Dnia 1. Osobne ćwiczenie, żeby nie mieszało progresji z ciężkim przysiadem." },
+    { "id": "c-ball-leg-curl", "n": "Uginanie nóg na piłce fitness", "bp": "upper legs", "eq": "stability ball", "tg": "hamstring", "primaries": ["hamstring"], "secondaries": ["gluteal", "abs"], "muscleGroups": ["hamstring", "gluteal", "abs"], "desc": "Leżysz na plecach, pięty na piłce, biodra w górze. Przyciągasz piłkę piętami do pośladków i wracasz powoli." }
+  ]
+}
