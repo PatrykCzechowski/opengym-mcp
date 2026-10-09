@@ -5,6 +5,7 @@ import { Client } from '@modelcontextprotocol/sdk/client/index.js'
 import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js'
 import { createGateway } from '../src/server.js'
 import { fakeOpenGym, listen } from './fake-opengym.js'
+import { EXIDX } from '../vendor/opengym/frontend/src/lib/exercises.js'
 
 const ANA = 'token-ana'
 const BEN = 'token-ben'
@@ -194,6 +195,27 @@ describe('body weight, custom exercises, settings', () => {
     expect((await call(c, 'delete_custom_exercise', { exercise_id: created.id })).error).toMatch(/^EBUSY/)
     await call(c, 'delete_routine', { routine_id: r.id })
     expect((await call(c, 'delete_custom_exercise', { exercise_id: created.id })).deleted.id).toBe(created.id)
+    await c.close()
+  })
+
+  it('plans a custom cardio exercise by time and speed, like a built-in one', async () => {
+    const c = await connect(ANA)
+    const { created: rower } = await call(c, 'create_custom_exercise', { name: 'Rowing machine', body_part: 'cardio', equipment: 'rowing machine' })
+    const { created: r } = await call(c, 'create_routine', { name: 'Erg', exercises: [{ exercise_id: rower.id, sets: 1, minutes: 8, speed: 14 }] })
+    expect(api.doc(ANA).routines.find(x => x.id === r.id).ex[0]).toMatchObject({ id: rower.id, min: 8, speed: 14 })
+
+    const got = await call(c, 'get_routine', { routine_id: r.id })
+    expect(got.exercises[0]).toMatchObject({ mode: 'cardio' })
+    const pv = await call(c, 'preview_session', { routine_id: r.id })
+    expect(pv.exercises[0]).toMatchObject({ mode: 'cardio', planned: { sets: 1, min: 8 } })
+    expect(pv.exercises[0].opening_sets[0]).toMatchObject({ min: 8, speed: 14 })
+    const plan = await call(c, 'export_plan', {})
+    expect(plan.routines.find(x => x.id === r.id).ex[0]).toMatchObject({ min: 8, speed: 14 })
+    // Registered for the call only: one profile's customs never linger in the shared index.
+    expect(EXIDX[rower.id]).toBeUndefined()
+
+    await call(c, 'delete_routine', { routine_id: r.id })
+    await call(c, 'delete_custom_exercise', { exercise_id: rower.id })
     await c.close()
   })
 
